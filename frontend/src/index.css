@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+ 
+    margin: 0;
+}
+
+.navbar{
+    background-color: rgb(21, 20, 20);
+    
+    z-index: 1;
+    color: antiquewhite;
+    padding: 2rem;
+    margin: 0;
+}

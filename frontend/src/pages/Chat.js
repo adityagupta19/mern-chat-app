@@ -56,16 +56,18 @@ function Chat({ socket }) {
 
 	return (
 		<div className="bg-slate-300 h-screen w-full flex  justify-center">
-			<div className="flex flex-col w-[800px] max-h-full bg-gray-700 mt-10 mb-8 mx-2 rounded-2xl relative">
+			<div className="flex flex-col w-[900px] max-h-full bg-gray-700 mt-10 mb-8  rounded-2xl relative">
 				<div className="flex justify-center my-4 text-lg font-bold text-white">
 					<p>ROOM {room}</p>
 				</div>
-				<div className="">
+				<div className="overflow-auto scrollbar mr-2 scrollbar-thumb-white scrollbar-thumb-rounded-full scrollbar-track-rounded-full justify-between mb-9 scrollbar-w-sm">
 					{messageList.map((message) => {
 						return (
 							<div
-								className={` rounded-xl mb-4 px-2 mx-2 flex flex-col text-white text-right  ${
-									message.author ===  user  ? "items-end bg-slate-400" : "bg-slate-600"
+								className={` rounded-xl mb-4 px-2 mx-2 mr-6 flex flex-col text-white text-right  ${
+									message.author === user
+										? "items-end bg-slate-400"
+										: "bg-slate-600"
 								} `}
 							>
 								<div className="flex ml-1 text-lg">
